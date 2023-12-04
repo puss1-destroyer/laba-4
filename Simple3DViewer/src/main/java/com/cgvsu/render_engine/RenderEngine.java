@@ -79,7 +79,7 @@ public class RenderEngine {
             final Model mesh,
             final int width,
             final int height,
-            final int s) {
+            final float s) {
 
         Matrix4f viewMatrix = camera.getViewMatrix();
         Matrix4f projectionMatrix = camera.getProjectionMatrix();

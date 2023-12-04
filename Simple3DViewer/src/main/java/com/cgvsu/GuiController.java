@@ -44,7 +44,7 @@ public class GuiController {
     private TextField scaleField;
 
     private Model mesh = null;
-    private int s;
+    private float s;
 
     private Camera camera = new Camera(
             new Vector3f(0, 00, 100),
@@ -56,7 +56,7 @@ public class GuiController {
     @FXML
     private void initialize() {
         scaleButton.setOnAction(actionEvent -> {
-            s = Integer.parseInt(scaleField.getText());
+            s = Float.parseFloat(scaleField.getText());
         });
         anchorPane.prefWidthProperty().addListener((ov, oldValue, newValue) -> canvas.setWidth(newValue.doubleValue()));
         anchorPane.prefHeightProperty().addListener((ov, oldValue, newValue) -> canvas.setHeight(newValue.doubleValue()));
